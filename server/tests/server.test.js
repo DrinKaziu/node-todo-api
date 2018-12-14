@@ -92,10 +92,24 @@ describe('GET /todos/:id', () => {
       .end(done);
   });
 
-  it('Should return 400 if id not valid i.e. non-object', (done) => {
+  it('Should return 404 if id not valid i.e. non-object', (done) => {
     request(app)
       .get('/todos/123abc')
       .expect(404)
       .end(done);
+  });
+});
+
+describe('DELETE /todos/:id', () => {
+  it('Should remove a todo', (done) => {
+
+  });
+
+  it('Should return 404 if todo not found', (done) => {
+
+  });
+
+  it('Should return 404 if id invalid i.e. non-object', (done) => {
+
   });
 });
